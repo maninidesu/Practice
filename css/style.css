@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* ベースのスタイル
+------------------------------------------ */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    color: #000;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+a,
+a:hover,
+a i {
+    transition: all .3s;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+ul {
+    list-style: none;
+}
+/* main
+------------------------------------------ */
+/* アニメーション練習 */
+.circle-1, .circle-2 {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    margin: 2rem 3.5rem;
+    border:  .187rem solid yellowgreen;
+    border-radius: 50%;
+    background-color: aquamarine;
+    opacity: .7;
+    
+}
+.circle-1 {
+    animation: move-circle 3s 2s infinite;
+}
+.circle-2 {
+    left: 12.5rem;
+    top: 10rem;
+    animation: move-circle-reverse 3s 2s infinite;
+}
+.circle-1, .circle-2 {
+    animation-direction: normal;      /*初期値 normal*/
+    animation-fill-mode: none;       /*初期値 none*/
+    animation-timing-function: ease;  /*初期値 ease*/
+    /*animation-name: slideshow;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;*/
+}
+.circle-1:hover, .circle-2:hover{
+    animation-play-state: running;     /* 他のオプションpaused*/
+}
+@keyframes move-circle {
+    0% {
+        left: 0;
+        top: 0;
+        transform: scale(1);
+        background-color: aquamarine;
+    } 
+    25% {
+        left: 6.25rem;
+        background-color: aqua;
+    }
+    50% {
+        left: 12.5rem;
+        top: 10rem;
+        transform: scale(1.25);
+        background-color: blue;
+    }
+    75% {
+        left: 6.25rem;
+        background-color: lightgreen;
+    }
+    100% {
+        left: 0;
+        top: 0;
+        transform: scale(1);
+        background-color: aquamarine;
+    }
+}
+@keyframes move-circle-reverse {
+    0% {
+        left: 12.5rem;
+        top: 10;
+        transform: scale(1);
+        background-color: aquamarine;
+    } 
+    25% {
+        left: 6.25rem;
+        background-color: aqua;
+    }
+    50% {
+        left: 0;
+        top: 0;
+        transform: scale(1.25);
+        background-color: blue;
+    }
+    75% {
+        left: 6.25rem;
+        background-color: lightgreen;
+    }
+    100% {
+        left: 12.5rem;
+        top: 10rem;
+        transform: scale(1);
+        background-color: aquamarine;
+    }
+}
+.text-1 {
+    margin-bottom: 2rem;
+}
+
+/* コンタクトフォーム練習 */
+.contact-title {
+    margin-bottom: 1rem;
+}
+/* テーブル練習 */
+.table-title {
+    margin-bottom: 1rem;
+}
