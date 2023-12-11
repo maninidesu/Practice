@@ -46,15 +46,15 @@ ul {
     left: 12.5rem;
     top: 10rem;
     animation: move-circle-reverse 3s 2s infinite;
+    /*animation-name: slideshow;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;*/
 }
 .circle-1, .circle-2 {
     animation-direction: normal;      /*初期値 normal*/
     animation-fill-mode: none;       /*初期値 none*/
     animation-timing-function: ease;  /*初期値 ease*/
-    /*animation-name: slideshow;
-    animation-duration: 3s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;*/
 }
 .circle-1:hover, .circle-2:hover{
     animation-play-state: running;     /* 他のオプションpaused*/
@@ -118,12 +118,69 @@ ul {
 .text-1 {
     margin-bottom: 2rem;
 }
-
+/* cssの小技 */
+.technique-1 {
+    padding: 0 1rem;
+}
+.technique-1 button, .technique-1 span {
+    vertical-align: middle;
+}
+.technique-title {
+    margin: 2rem 0;
+}
+.technique-circle {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: rgb(0, 211, 0);
+}
+.technique-arrow {
+    position: relative;
+    display: inline-block;
+    width: 12rem;
+    height: 2rem;
+    margin-left: 2rem;
+    line-height: 2rem;
+    font-size: .75rem;
+    color: #fff;
+    border-radius: .2rem;
+    background-color: orange;
+    transition: all .3s;
+}
+.technique-arrow:hover {
+    box-shadow: .2rem .2rem .2rem rgb( 0, 0, 0, .2);
+}
+.technique-arrow::after {
+    position: absolute;
+    top: calc(50% - .2rem);
+    right: 1.5rem;
+    display: inline-block;
+    content: "";
+    width: .55rem;
+    height: .55rem;
+    border-top: #fff solid .124rem;
+    border-right: #fff solid .124rem;
+    transform:rotate(45deg);
+    transition: right .3s;
+}
+.technique-arrow:hover::after {
+    right: 1.3rem;
+}
+.technique-triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2rem;
+    border-style: solid;
+    border-width: 0 2.8rem 5rem 2.8rem;
+    border-color: transparent transparent orangered transparent;
+}
 /* コンタクトフォーム練習 */
 .contact-title {
-    margin-bottom: 1rem;
+    margin: 2rem 0;
 }
 /* テーブル練習 */
 .table-title {
-    margin-bottom: 1rem;
+    margin: 2rem 0;
 }
