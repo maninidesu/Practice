@@ -5,16 +5,17 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     line-height: 1;
-    color: #000;
+    color: #333;
 }
 a {
-    color: #fff;
     text-decoration: none;
 }
 a,
 a:hover,
 a i {
-    transition: all .3s;
+}
+p {
+    line-height: 1.5;
 }
 img {
     max-width: 100%;
@@ -24,9 +25,20 @@ img {
 ul {
     list-style: none;
 }
+/* 部品
+------------------------------------------ */
+.section-title {
+    margin-bottom: 1.5rem;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+
 /* main
 ------------------------------------------ */
-/* アニメーション練習 */
+/* アニメーション練習
+------------------------------------------ */
 .circle-1, .circle-2 {
     position: relative;
     display: inline-block;
@@ -59,6 +71,8 @@ ul {
 .circle-1:hover, .circle-2:hover{
     animation-play-state: running;     /* 他のオプションpaused*/
 }
+
+/*
 @keyframes move-circle {
     0% {
         left: 0;
@@ -115,12 +129,14 @@ ul {
         background-color: aquamarine;
     }
 }
+*/
 .text-1 {
     margin-bottom: 2rem;
 }
-/* cssの小技 */
+/* CSSの小技
+------------------------------------------ */
 .technique-1 {
-    padding: 0 1rem;
+    padding: 1rem;
 }
 .technique-1 button, .technique-1 span {
     vertical-align: middle;
@@ -145,8 +161,8 @@ ul {
     font-size: .75rem;
     color: #fff;
     border-radius: .2rem;
-    background-color: orange;
-    transition: all .3s;
+    background: linear-gradient(90deg, #ffdd00 0%, #ffb01e 50%, orange 100%);
+    transition: box-shadow .3s;
 }
 .technique-arrow:hover {
     box-shadow: .2rem .2rem .2rem rgb( 0, 0, 0, .2);
@@ -175,12 +191,52 @@ ul {
     border-style: solid;
     border-width: 0 2.8rem 5rem 2.8rem;
     border-color: transparent transparent orangered transparent;
+    transition: transform .3s, border-color .3s;
 }
-/* コンタクトフォーム練習 */
-.contact-title {
-    margin: 2rem 0;
+.technique-triangle:hover {
+    border-color: transparent transparent rgb(255, 0, 255) transparent;
+    transform: rotate(180deg);
 }
-/* テーブル練習 */
-.table-title {
-    margin: 2rem 0;
+/*  */
+.color-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    border: .25rem solid purple;
+    width: 80%;
+    margin: 0 auto 2rem;
+    padding: 2rem;
 }
+.color-btn {
+    display: inline-block;
+    width: 6rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .75rem;
+    font-weight: bold;
+    border-radius: .2rem;
+    background-color: rgb(211, 123, 211);
+    transition: box-shadow .3s, color .3s, background-color .3s;
+}
+.color-btn-clicked {
+    font-size: 0;
+    color: #fff;
+    background-color: rgb(179, 0, 179);
+    box-shadow: .2rem .2rem .2rem rgb( 0, 0, 0, .2);
+}
+.color-btn-clicked::before {
+    content: '押したよ！';
+    font-size: .75rem;
+}
+/* テーブル練習
+------------------------------------------ */
+.table {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+/* コンタクトフォーム練習
+------------------------------------------ */
+
