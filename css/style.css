@@ -133,10 +133,50 @@ ul {
 .text-1 {
     margin-bottom: 2rem;
 }
+/* javascript
+------------------------------------------ */
+.example {
+    margin: 2.5rem;
+}
+.button {
+    width: 18.75rem;
+    padding: .625rem;
+    margin: .625rem 0;
+    text-align: center;
+    color: #fff;
+    background-color: #2e7c9f;
+    border-radius: .25rem;
+}
+#list-box {
+    padding: 1.5rem;
+    background-color: #cdf2ff;
+}
+#list {
+    line-height: 1.75;
+    list-style: decimal;
+}
+.example03 .button {
+    width: 12.5rem;
+    color: #000;
+}
+#list-color {
+    line-height: 1.75;
+    list-style: decimal;
+}
+.button-blue {
+    background-color: skyblue;
+}
+.button-yellow {
+    background-color: yellow;
+}
+.button-orange {
+    background-color: orange;
+}
 /* CSSの小技
 ------------------------------------------ */
 .technique-1 {
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 .technique-1 button, .technique-1 span {
     vertical-align: middle;
@@ -145,11 +185,24 @@ ul {
     margin: 2rem 0;
 }
 .technique-circle {
+    position: relative;
+    z-index: 1;
     display: inline-block;
     width: 5rem;
     height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
     border-radius: 50%;
+    color: #ffb01e;
     background-color: rgb(0, 211, 0);
+    transition: color .2s, background-color .2s;
+    cursor: pointer;
+}
+.technique-circle:hover {
+    color: rgb(0, 211, 0);
+    background-color: #ffb01e;
 }
 .technique-arrow {
     position: relative;
@@ -197,7 +250,77 @@ ul {
     border-color: transparent transparent rgb(255, 0, 255) transparent;
     transform: rotate(180deg);
 }
-/*  */
+/* 小技2 */
+.technich-2 {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.bullet-list {
+    line-height: 1.5;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: rgb(255, 90, 31);
+}
+.bullet-list li {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+.marker-tutrial-title {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.marker-tutrial-text {
+    line-height: 1.2;
+}
+.marker {
+    background: yellow;
+    /* マーカーでbackgroundを使う場合は同じ%にする必要がある */
+    background: linear-gradient(transparent 50%, yellow 50%);
+}
+.marker-pink {
+    background: linear-gradient(transparent 50%, rgb(255, 28, 153) 50%);
+}
+/* 小技３ */
+.technich-3 {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+.chanpururu-title {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #ffb01e;text-align: center;
+}
+.chanpururu-list-item h3 {
+    margin-bottom: .75rem;
+}
+.chanpururu-list-item h3::before {
+    display: block;
+    width: 5.5rem;
+    height: 1.8rem;
+    text-align: center;
+    line-height: 1.8rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ffdd00;
+    border-radius: .2rem;
+}
+.chanpururu-list-item:nth-of-type(1) h3::before {
+    content: 'Point1';
+}
+.chanpururu-list-item:nth-of-type(2) h3::before {
+    content: 'Point2';
+}
+.chanpururu-list-item:nth-of-type(3) h3::before {
+    content: 'Point3';
+}
+.chanpururu-list li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+/* 変色ボタン */
 .color-btn-box {
     display: flex;
     justify-content: center;
@@ -233,10 +356,34 @@ ul {
 }
 /* テーブル練習
 ------------------------------------------ */
+.table th, .table td {  /* th, td にborderを付ける */
+    border: 0.062rem solid #000;
+    padding: 1rem;
+    box-sizing: border-box;
+}
 .table {
     width: 100%;
     margin-bottom: 2rem;
+    border-collapse: collapse; /* ボーダーの */
+    table-layout: fixed; /* 表のそれぞれの横幅が等しくなる */
+    text-align: center;
+}
+.table thead {    /* background-colorはth, td につける */
+    background-color: #2e7c9f;
+    color: #fff;
+}
+.table tbody th {
+    background-color: #cdf2ff;
+}
+.table td:hover {
+    font-weight: 700;
+    background-color: #ffdd00;
+}
+.table tfoot td, .table tfoot th {
+    background-color: #ffedb3;
+}
+.table03 thead th:first-child {
+    width: 12rem;
 }
 /* コンタクトフォーム練習
 ------------------------------------------ */
-
