@@ -10,10 +10,6 @@ body {
 a {
     text-decoration: none;
 }
-a,
-a:hover,
-a i {
-}
 p {
     line-height: 1.5;
 }
@@ -29,6 +25,7 @@ ul {
 ------------------------------------------ */
 .section-title {
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 .container {
     width: 90%;
@@ -387,3 +384,40 @@ ul {
 }
 /* コンタクトフォーム練習
 ------------------------------------------ */
+.contact {
+    padding: 2rem 0;
+    background-color: #ffb01e;
+}
+.contact .container {
+    width: 85%;
+}
+.contact h3, .contact p {
+    text-align: center;
+}
+.contact input, .contact textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: .625rem;
+    background-color: #fff;
+    border-radius: .3rem;
+}
+.contact button {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgb(232, 50, 0);  
+    border-radius: 2rem; 
+}
+.contact input::placeholder, .contact textarea::placeholder {
+    color: #777;
+}
+.contact input {
+    height: 3.25rem;
+}
+.contact textarea {
+    height: 6.25rem;
+}
